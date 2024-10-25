@@ -16,18 +16,16 @@ void loop(void) {
   M5.delay(1);
   M5.update();
   if (M5.BtnB.wasPressed()) {
-    // 右側のボタンを押して離した    
-    digitalWrite(ODOR_PIN, LOW);
+    // 右側のボタンを押して離した        
     tone(GPIO_NUM_2, 600, 1000);  // 600Hzを1000ms(1秒)
     M5.Log.println("BtnA TONE(600Hz)");   
   }
   if(M5.BtnA.wasPressed()){
     // 真ん中のボタンを押して離した
     M5.Log.println("BtnB");
-    for (int i = 0; i < CYCLES; i++) {
-      digitalWrite(ODOR_PIN, LOW);
+    for (int i = 0; i < CYCLES; i++) {      
       tone(GPIO_NUM_2, 600, 1000);  // 600Hzを1000ms(1秒)      
-      delay(10000);
+      delay(100000);
     }
     M5.Log.println("Done");
   }
