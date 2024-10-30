@@ -18,11 +18,11 @@ void loop(void) {
   if (M5.BtnB.wasPressed()) {
     // 右側のボタンを押して離した        
     tone(GPIO_NUM_2, 600, 1000);  // 600Hzを1000ms(1秒)
-    M5.Log.println("BtnA TONE(600Hz)");   
+    M5.Log.println("BtnB TONE(600Hz)");   
   }
   if(M5.BtnA.wasPressed()){
     // 真ん中のボタンを押して離した
-    M5.Log.println("BtnB");
+    M5.Log.println("BtnA");
     for (int i = 0; i < CYCLES; i++) {      
       tone(GPIO_NUM_2, 600, 1000);  // 600Hzを1000ms(1秒)      
       delay(100000);
