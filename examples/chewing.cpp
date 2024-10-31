@@ -25,8 +25,8 @@ void loop(void) {
     M5.Log.println("BtnA");
     for (int i = 0; i < CYCLES; i++) {      
       tone(GPIO_NUM_2, 600, 1000);  // 600Hzを1000ms(1秒)      
-      delay(100000);
       M5.Log.printf("Cycle: %d\n", i);
+      delay(100000);      
     }
     M5.Log.println("Done");
   }
